@@ -1,0 +1,56 @@
+# Function Usecases
+
+
+
+### Utility functions
+
+:::{.callout-important}
+## Task
+* Write a function `rmse` that calculates the Root Mean Squared Error.
+* Test the function with the dataset below.
+:::
+
+```{r}
+#| echo: false
+knitr::include_graphics("https://community.qlik.com/legacyfs/online/128958_2016-06-23%2013_45_36-Root%20Mean%20Squared%20Error%20_%20Kaggle.png")
+```
+
+
+```{r}
+#| eval: false
+#| echo: true
+x = c(2,5,3,4)
+y = c(2,6,5,5)
+```
+
+
+
+
+### Semi-Automatic analysis workflow
+
+
+
+```{r}
+dwd = read.csv("https://opendata.dwd.de/climate_environment/CDC/regional_averages_DE/seasonal/air_temperature_mean/regional_averages_tm_summer.txt", sep = ";", skip = 1)
+knitr::kable(head(dwd))
+```
+
+
+
+:::{.callout-important}
+## Task
+* Write a function that calculates the long-term average temperature for a particular region in Germany.
+* The function should have three arguments: the region, the start year and the end year.
+* The function should return the temperature average between these two year for the specified region.
+
+:::
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,114 @@
+[
+  {
+    "objectID": "cond_usecase.html",
+    "href": "cond_usecase.html",
+    "title": "Conditionals Use Case",
+    "section": "",
+    "text": "Conditionals Use Case\nbla bla"
+  },
+  {
+    "objectID": "loop_for_syntax.html",
+    "href": "loop_for_syntax.html",
+    "title": "Introduction to for-loops",
+    "section": "",
+    "text": "Loops are a control structure in programming to repeat statements (i.e. lines of code) multiple times. This can save a lot of tedious work by reducing code redundancy. The syntax of for-loops is quite simple. In the following scheme, statement 1 will be executed once before the loop. Then the green loop block starts. statement 2 is executed multiple times in this case 10 times, once for each run through of the loop. After this, statement 3 is executed once again, as it is outside the loop block.\n\n\n\n\n\n\n\n\n\nTranslated into R code, this would look something like this:\n\nprint(\"This text is printed once before the loop.\") # statement  1\n\nfor(i in 1:10){\n    print(\"statement 2\") # statement 2\n}\n\nprint(\"This text is printed once after the loop.\") # statement 3\n\n[1] \"This text is printed once before the loop.\"\n[1] \"statement 2\"\n[1] \"statement 2\"\n[1] \"statement 2\"\n[1] \"statement 2\"\n[1] \"statement 2\"\n[1] \"statement 2\"\n[1] \"statement 2\"\n[1] \"statement 2\"\n[1] \"statement 2\"\n[1] \"statement 2\"\n[1] \"This text is printed once after the loop.\"\n\n\n\n\n\nIntuitively, when we write a for-loop, we want to define, how many time the loop should run through the code. However, this is not the right approach to think about loops. Instead, we define a so called iterator, in the example above the variable i. In each run through of the loop, i takes on a different value, here the numbers 1 to 10. The loop stops, once i reached the last defined value.\nSee in the example below, we define a vector with 4 elements and use it in the for() function for the different states of iterator (here called xx). Hence, the loop goes through the print statement 4 times.\n\nnumbers &lt;- c(4, 3, 1, 10)\n\nfor(xx in numbers){\n    print(\"Hi\")\n}\n\n[1] \"Hi\"\n[1] \"Hi\"\n[1] \"Hi\"\n[1] \"Hi\"\n\n\nLoops unlock their full potential once you understand that you can use the iterator (here again xx) inside the loop’s statements. On each run of the loop, you do the same steps, but with slightly different input:\n\nnumbers &lt;- c(4, 25, 1, 49)\n\nfor(xx in numbers){\n  print(paste0(\"The iterator xx is now \", xx, \" and it's square root is:\"))\n  print(sqrt(xx))\n}\n\n[1] \"The iterator xx is now 4 and it's square root is:\"\n[1] 2\n[1] \"The iterator xx is now 25 and it's square root is:\"\n[1] 5\n[1] \"The iterator xx is now 1 and it's square root is:\"\n[1] 1\n[1] \"The iterator xx is now 49 and it's square root is:\"\n[1] 7\n\n\n\n\n\n\nx &lt;- 1:10\nfor(i in x){\n  result &lt;- i^2\n}\n\nresult\n\n[1] 100\n\n\n\n\n\n\n\n\nresult\n\n\n\nWhy is the result 100? What did you expect?\n\n\n\nIf you want to save the result of the loop, you have to assign the output to e.g. element of a vector.\n\nx &lt;- 1:10\nresult &lt;- c()\n\nfor(i in x){\n  result[i] &lt;- x[i]^2\n}\n\nresult\n\n [1]   1   4   9  16  25  36  49  64  81 100\n\n\n\n\n\n\n\n\nTask\n\n\n\n\nCreate a vector with 10 random numbers.\nCreate a loop that does the following:\n\nmultiply the number with 2 and print the result\ndivide the number by 3 and save the result"
+  },
+  {
+    "objectID": "loop_for_syntax.html#what-is-a-loop",
+    "href": "loop_for_syntax.html#what-is-a-loop",
+    "title": "Introduction to for-loops",
+    "section": "",
+    "text": "Loops are a control structure in programming to repeat statements (i.e. lines of code) multiple times. This can save a lot of tedious work by reducing code redundancy. The syntax of for-loops is quite simple. In the following scheme, statement 1 will be executed once before the loop. Then the green loop block starts. statement 2 is executed multiple times in this case 10 times, once for each run through of the loop. After this, statement 3 is executed once again, as it is outside the loop block.\n\n\n\n\n\n\n\n\n\nTranslated into R code, this would look something like this:\n\nprint(\"This text is printed once before the loop.\") # statement  1\n\nfor(i in 1:10){\n    print(\"statement 2\") # statement 2\n}\n\nprint(\"This text is printed once after the loop.\") # statement 3\n\n[1] \"This text is printed once before the loop.\"\n[1] \"statement 2\"\n[1] \"statement 2\"\n[1] \"statement 2\"\n[1] \"statement 2\"\n[1] \"statement 2\"\n[1] \"statement 2\"\n[1] \"statement 2\"\n[1] \"statement 2\"\n[1] \"statement 2\"\n[1] \"statement 2\"\n[1] \"This text is printed once after the loop.\""
+  },
+  {
+    "objectID": "loop_for_syntax.html#what-is-the-iterator",
+    "href": "loop_for_syntax.html#what-is-the-iterator",
+    "title": "Introduction to for-loops",
+    "section": "",
+    "text": "Intuitively, when we write a for-loop, we want to define, how many time the loop should run through the code. However, this is not the right approach to think about loops. Instead, we define a so called iterator, in the example above the variable i. In each run through of the loop, i takes on a different value, here the numbers 1 to 10. The loop stops, once i reached the last defined value.\nSee in the example below, we define a vector with 4 elements and use it in the for() function for the different states of iterator (here called xx). Hence, the loop goes through the print statement 4 times.\n\nnumbers &lt;- c(4, 3, 1, 10)\n\nfor(xx in numbers){\n    print(\"Hi\")\n}\n\n[1] \"Hi\"\n[1] \"Hi\"\n[1] \"Hi\"\n[1] \"Hi\"\n\n\nLoops unlock their full potential once you understand that you can use the iterator (here again xx) inside the loop’s statements. On each run of the loop, you do the same steps, but with slightly different input:\n\nnumbers &lt;- c(4, 25, 1, 49)\n\nfor(xx in numbers){\n  print(paste0(\"The iterator xx is now \", xx, \" and it's square root is:\"))\n  print(sqrt(xx))\n}\n\n[1] \"The iterator xx is now 4 and it's square root is:\"\n[1] 2\n[1] \"The iterator xx is now 25 and it's square root is:\"\n[1] 5\n[1] \"The iterator xx is now 1 and it's square root is:\"\n[1] 1\n[1] \"The iterator xx is now 49 and it's square root is:\"\n[1] 7"
+  },
+  {
+    "objectID": "loop_for_syntax.html#storing-results-of-a-for-loop",
+    "href": "loop_for_syntax.html#storing-results-of-a-for-loop",
+    "title": "Introduction to for-loops",
+    "section": "",
+    "text": "x &lt;- 1:10\nfor(i in x){\n  result &lt;- i^2\n}\n\nresult\n\n[1] 100\n\n\n\n\n\n\n\n\nresult\n\n\n\nWhy is the result 100? What did you expect?\n\n\n\nIf you want to save the result of the loop, you have to assign the output to e.g. element of a vector.\n\nx &lt;- 1:10\nresult &lt;- c()\n\nfor(i in x){\n  result[i] &lt;- x[i]^2\n}\n\nresult\n\n [1]   1   4   9  16  25  36  49  64  81 100\n\n\n\n\n\n\n\n\nTask\n\n\n\n\nCreate a vector with 10 random numbers.\nCreate a loop that does the following:\n\nmultiply the number with 2 and print the result\ndivide the number by 3 and save the result"
+  },
+  {
+    "objectID": "cond_syntax.html",
+    "href": "cond_syntax.html",
+    "title": "if-else",
+    "section": "",
+    "text": "if-else\nSometimes you want code that executes only in certain conditions. This is done via if-else structures like the example below. The condition in the if-statement expects TRUE or FALSE. Use logical operators to build an expression that turns out either TRUE or FALSE.\n\n\n\n\n\n\n\n\n\n\nx = 4 # statement 1\n\nif(x &gt; 2){ # condition\n    print(\"x is larger than 2\") # statement 2\n}\n\nprint(\"This message does not care about if.\") # statement 3\n\n\n\n\n\n\n\n\n\n\n\nx = 4 # statement 1\n\nif(x &gt; 2){ # condition\n    print(\"x is larger than 2\") # statement 2\n} else{ # the false case\n    \n    print(\"x is not larger than 2\") # statement 4\n    \n}\n\nprint(\"This message does not care about if.\") # statement 3\n\n\n\n\n\n\n\nTask\n\n\n\nsample(10, 1) outputs a random number between 1 and 10. Write a if-else statement:\n\nIf the number is larger than 5, print the message “A large number”.\nIf the number is smaller than 5, print the message “A small number”.\nIf the number is exactly 5, print “It’s 5”"
+  },
+  {
+    "objectID": "u03_functions.html",
+    "href": "u03_functions.html",
+    "title": "functions",
+    "section": "",
+    "text": "functions\n\nfor common tasks and computations\nhelps to structure code\nreduces code redundancies\nintegration into packages with documentation\n\n\nmyFunction &lt;- function(arg1){\n  print(\"I will now multiply you input with 5.\")\n  result &lt;- arg1 * 5\n  return(result)\n}\n\n\na &lt;- myFunction(arg1 = 8)\n\n[1] \"I will now multiply you input with 5.\"\n\na\n\n[1] 40\n\n\nIf you need examples, all R package source codes consist of functions: https://github.com/r-spatial/sf/tree/master/R\n\n\n\n\n\n\nTask\n\n\n\n\nWrite a function rmse that calculates the Root Mean Squared Error.\nTest the function with the dataset below.\n\n\n\n\n\n\n\n\n\n\n\n\n\nx = c(2,5,3,4)\ny = c(2,6,5,5)\n\n\n\n\n\n\n\nTask\n\n\n\n\nWrite a function calcNDVI that calculates the NDVI.\nThe function should have two raster bands as inputs and return one raster band.\nTest the function with a satellite image."
+  },
+  {
+    "objectID": "fun_usecase.html",
+    "href": "fun_usecase.html",
+    "title": "Function Usecases",
+    "section": "",
+    "text": "Function Usecases\n\nUtility functions\n\n\n\n\n\n\nTask\n\n\n\n\nWrite a function rmse that calculates the Root Mean Squared Error.\nTest the function with the dataset below.\n\n\n\n\n\n\n\n\n\n\n\n\n\nx = c(2,5,3,4)\ny = c(2,6,5,5)\n\n\n\nSemi-Automatic analysis workflow\n\ndwd = read.csv(\"https://opendata.dwd.de/climate_environment/CDC/regional_averages_DE/seasonal/air_temperature_mean/regional_averages_tm_summer.txt\", sep = \";\", skip = 1)\nknitr::kable(head(dwd))\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJahr\nsummer\nBrandenburg.Berlin\nBrandenburg\nBaden.Wuerttemberg\nBayern\nHessen\nMecklenburg.Vorpommern\nNiedersachsen\nNiedersachsen.Hamburg.Bremen\nNordrhein.Westfalen\nRheinland.Pfalz\nSchleswig.Holstein\nSaarland\nSachsen\nSachsen.Anhalt\nThueringen.Sachsen.Anhalt\nThueringen\nDeutschland\nX\n\n\n\n\n1881\nsummer\n17.13\n17.11\n17.03\n16.39\n16.62\n16.12\n16.24\n16.24\n16.66\n16.90\n15.80\n17.19\n16.20\n16.88\n16.46\n15.95\n16.53\nNA\n\n\n1882\nsummer\n16.45\n16.44\n14.85\n14.46\n15.02\n16.19\n15.71\n15.72\n15.48\n15.16\n16.10\n15.33\n15.05\n16.02\n15.41\n14.64\n15.33\nNA\n\n\n1883\nsummer\n17.52\n17.51\n15.87\n15.50\n16.15\n16.66\n16.35\n16.36\n16.37\n16.23\n16.31\n16.42\n16.49\n17.14\n16.57\n15.84\n16.26\nNA\n\n\n1884\nsummer\n17.00\n16.98\n16.08\n15.35\n16.01\n16.32\n16.20\n16.21\n16.45\n16.52\n16.19\n16.83\n15.92\n16.57\n16.02\n15.33\n16.10\nNA\n\n\n1885\nsummer\n17.18\n17.17\n16.63\n16.05\n15.84\n16.06\n15.78\n15.78\n16.11\n16.28\n15.53\n16.65\n16.29\n16.63\n16.10\n15.43\n16.18\nNA\n\n\n1886\nsummer\n17.16\n17.15\n16.04\n15.47\n15.88\n16.05\n15.89\n15.89\n16.17\n16.17\n15.52\n16.42\n16.09\n16.61\n16.05\n15.35\n16.00\nNA\n\n\n\n\n\n\n\n\n\n\n\nTask\n\n\n\n\nWrite a function that calculates the long-term average temperature for a particular region in Germany.\nThe function should have three arguments: the region, the start year and the end year.\nThe function should return the temperature average between these two year for the specified region."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Control Structures in R",
+    "section": "",
+    "text": "Welcome to the R control structures reference page.\n\n# x: a text\nwelcome_message = function(x){\n    \n    upper_x = toupper(x)\n    \n    result = paste0(\"Welcome to 'Control Structures in R'. Here, you find information about \", upper_x, \".\")\n    return(result)\n}\n\npotential_topics = data.frame(topic = c(\"functions\", \"vectors\", \"data.frames\", \"conditionals\", \"loops\"),\n                              level = c(\"advanced\", \"basic\", \"basic\", \"advanced\", \"advanced\"))\npotential_topics\n\n\nfor(i in 1:nrow(potential_topics)){\n    \n    if(potential_topics$level[i] == \"advanced\"){\n        \n        message = welcome_message(potential_topics$topic[i])\n        \n    } else {\n        message = paste0(\"You should already be familiar with \", potential_topics$topic[i])\n    }\n    print(message)\n}\n\n         topic    level\n1    functions advanced\n2      vectors    basic\n3  data.frames    basic\n4 conditionals advanced\n5        loops advanced\n[1] \"Welcome to 'Control Structures in R'. Here, you find information about FUNCTIONS.\"\n[1] \"You should already be familiar with vectors\"\n[1] \"You should already be familiar with data.frames\"\n[1] \"Welcome to 'Control Structures in R'. Here, you find information about CONDITIONALS.\"\n[1] \"Welcome to 'Control Structures in R'. Here, you find information about LOOPS.\""
+  },
+  {
+    "objectID": "loop_lapply_syntax.html",
+    "href": "loop_lapply_syntax.html",
+    "title": "lapply-loops",
+    "section": "",
+    "text": "lapply-loops\nR has some more specific loop types that work very well with vectors and lists. They are called lapply loops in R and make use of functions that are applied over the element of a vector or list.\nThe syntax of the lapply loop can be a bit confusing at first as it is the other way around as the for loop. The biggest difference is, that lapply returns a list of values for every iteration step. So the output of the loop can be assigned directly to a variable.\n\nresult &lt;- lapply(i, FUN)\n\n# compared to:\nresult &lt;- c()\nfor(i in x){\n  result[i] &lt;- FUN\n}\n\nThere are multiple forms of apply loops. lapply and sapply only differ in their output format. apply is used for data.frames.\n\nlapply() # list apply\n\nsapply() # apply with vector output\n\napply() # loop over rows or columns of a data.frame\n\n\nlapply(seq(10), function(x){\n  x^2\n})\n\n[[1]]\n[1] 1\n\n[[2]]\n[1] 4\n\n[[3]]\n[1] 9\n\n[[4]]\n[1] 16\n\n[[5]]\n[1] 25\n\n[[6]]\n[1] 36\n\n[[7]]\n[1] 49\n\n[[8]]\n[1] 64\n\n[[9]]\n[1] 81\n\n[[10]]\n[1] 100\n\n\n\nsapply(seq(10), function(x){\n  x^2\n})\n\n [1]   1   4   9  16  25  36  49  64  81 100"
+  },
+  {
+    "objectID": "loop_for_usecase.html",
+    "href": "loop_for_usecase.html",
+    "title": "For Loop Usecase",
+    "section": "",
+    "text": "For Loop Usecase"
+  },
+  {
+    "objectID": "u01_for.html",
+    "href": "u01_for.html",
+    "title": "for-loops",
+    "section": "",
+    "text": "for-loops\n\n\n\n\n\n\nTask\n\n\n\nIn the Learnweb, download the 5 Meteosat scenes (MSG SEVIRI).\n\nWrite a loop that:\n\nreads one scene\ncreates a RGB composite\nsave a pdf file of the RGB composite.\n\n\n\n\nHints:\n\nwith list.files(\"directory_path\" , pattern = \".tif$\") you can create a vector that contain the file paths\nuse plotRGB from the terra package with the argument asp = 1 to prevent image distortions\nto name the pdf output files, use the iterator variable like this paste0(“output”,i,”.pdf”)"
+  },
+  {
+    "objectID": "fun_syntax.html",
+    "href": "fun_syntax.html",
+    "title": "Introduction to functions",
+    "section": "",
+    "text": "for common tasks and computations\nhelps to structure code\nto reduces code redundancies\nfor integration into packages with documentation\n\n\n\n\n\nmyFunction &lt;- function(arg1, arg2){\n  X &lt;- arg1 + arg2\n  result &lt;- sqrt(X)\n  return(result)\n}\n\n# executing the function\na &lt;- myFunction(arg1 = 8, arg2 = 10)\na\n\n[1] 4.242641"
+  },
+  {
+    "objectID": "fun_syntax.html#when-to-use-functions",
+    "href": "fun_syntax.html#when-to-use-functions",
+    "title": "Introduction to functions",
+    "section": "",
+    "text": "for common tasks and computations\nhelps to structure code\nto reduces code redundancies\nfor integration into packages with documentation"
+  },
+  {
+    "objectID": "fun_syntax.html#function-syntax",
+    "href": "fun_syntax.html#function-syntax",
+    "title": "Introduction to functions",
+    "section": "",
+    "text": "myFunction &lt;- function(arg1, arg2){\n  X &lt;- arg1 + arg2\n  result &lt;- sqrt(X)\n  return(result)\n}\n\n# executing the function\na &lt;- myFunction(arg1 = 8, arg2 = 10)\na\n\n[1] 4.242641"
+  },
+  {
+    "objectID": "u02_if.html",
+    "href": "u02_if.html",
+    "title": "if-else",
+    "section": "",
+    "text": "if-else\nSometimes you want code that executes only in certain conditions. This is done via if-else structures like the example below. The condition in the if-statement expects TRUE or FALSE. Use logical operators to build an expression that turns out either TRUE or FALSE.\n\nif(condition){\n  # Command 1\n  \n} else{\n  # Command 2\n  \n}\n\n\n\n\n\n\n\nTask\n\n\n\nsample(10, 1) outputs a random number between 1 and 10. Write a if-else statement:\n\nIf the number is larger than 5, print the message “A large number”.\nIf the number is smaller than 5, print the message “A small number”.\nIf the number is exactly 5, print “It’s 5”"
+  }
+]

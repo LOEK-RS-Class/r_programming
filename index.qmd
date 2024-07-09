@@ -1,0 +1,48 @@
+---
+title: "Control Structures in R"
+---
+
+Welcome to the R control structures reference page.
+
+
+```{r welcome}
+#| echo: true
+#| eval: true
+#| results: hold
+
+
+
+# x: a text
+welcome_message = function(x){
+    
+    upper_x = toupper(x)
+    
+    result = paste0("Welcome to 'Control Structures in R'. Here, you find information about ", upper_x, ".")
+    return(result)
+}
+
+potential_topics = data.frame(topic = c("functions", "vectors", "data.frames", "conditionals", "loops"),
+                              level = c("advanced", "basic", "basic", "advanced", "advanced"))
+potential_topics
+
+
+for(i in 1:nrow(potential_topics)){
+    
+    if(potential_topics$level[i] == "advanced"){
+        
+        message = welcome_message(potential_topics$topic[i])
+        
+    } else {
+        message = paste0("You should already be familiar with ", potential_topics$topic[i])
+    }
+    print(message)
+}
+
+```
+
+
+
+
+
+
+

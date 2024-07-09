@@ -1,0 +1,112 @@
+# Introduction to for-loops
+
+## What is a loop?
+
+Loops are a control structure in programming to repeat statements (i.e. lines of code) multiple times. This can save a lot of tedious work by reducing code redundancy. 
+The syntax of for-loops is quite simple. In the following scheme, `statement 1` will be executed **once** before the loop. Then the green loop block starts. `statement 2` is executed **multiple times** in this case 10 times, once for each run through of the loop. After this, `statement 3` is executed **once** again, as it is outside the loop block.
+
+
+```{r}
+#| echo: false
+knitr::include_graphics("assets/for_loop.png")
+```
+
+
+Translated into R code, this would look something like this:
+
+```{r}
+#| results: hold
+
+print("This text is printed once before the loop.") # statement  1
+
+for(i in 1:10){
+    print("statement 2") # statement 2
+}
+
+print("This text is printed once after the loop.") # statement 3
+
+```
+
+
+## What is the iterator?
+
+Intuitively, when we write a for-loop, we want to define, how many time the loop should run through the code. However, this is not the right approach to think about loops. Instead, we define a so called **iterator**, in the example above the variable `i`. In each run through of the loop, `i` takes on a different value, here the numbers 1 to 10. The loop stops, once `i` reached the last defined value. 
+
+See in the example below, we define a vector with 4 elements and use it in the `for()` function for the different states of iterator (here called `xx`). Hence, the loop goes through the print statement 4 times.
+
+```{r}
+#| echo: true
+
+numbers <- c(4, 3, 1, 10)
+
+for(xx in numbers){
+    print("Hi")
+}
+```
+
+
+Loops unlock their full potential once you understand that you can use the iterator (here again `xx`) inside the loop's statements. On each run of the loop, you do the same steps, but with slightly different input:
+
+
+```{r}
+#| echo: true
+numbers <- c(4, 25, 1, 49)
+
+for(xx in numbers){
+  print(paste0("The iterator xx is now ", xx, " and it's square root is:"))
+  print(sqrt(xx))
+}
+
+```
+
+
+
+## Storing results of a for loop 
+
+
+```{r}
+#| echo: true
+
+x <- 1:10
+for(i in x){
+  result <- i^2
+}
+
+result
+```
+
+
+:::{.callout-important}
+## result
+
+Why is the `result` 100? What did you expect?
+:::
+
+***
+
+If you want to save the result of the loop, you have to assign the output to e.g. element of a vector.
+
+
+```{r}
+#| echo: true
+
+x <- 1:10
+result <- c()
+
+for(i in x){
+  result[i] <- x[i]^2
+}
+
+result
+```
+
+
+:::{.callout-important}
+## Task
+* Create a vector with 10 random numbers.
+* Create a loop that does the following:
+  * multiply the number with 2 and print the result
+  * divide the number by 3 and save the result
+:::
+
+

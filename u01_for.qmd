@@ -1,0 +1,25 @@
+# for-loops
+
+
+:::{.callout-important}
+## Task
+
+In the Learnweb, download the 5 Meteosat scenes (MSG SEVIRI). 
+
+* Write a loop that:
+  * reads one scene
+  * creates a RGB composite
+  * save a pdf file of the RGB composite.
+
+:::
+
+
+Hints:
+
+* with `list.files("directory_path" , pattern = ".tif$")` you can create a vector that contain the file paths
+* use `plotRGB` from the `terra` package with the argument `asp = 1` to prevent image distortions
+* to name the pdf output files, use the iterator variable like this `paste0(“output”,i,”.pdf”)`
+
+
+
+

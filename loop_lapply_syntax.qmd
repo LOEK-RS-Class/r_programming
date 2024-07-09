@@ -1,0 +1,63 @@
+# lapply-loops
+
+R has some more specific loop types that work very well with `vectors` and `lists`. They are called `lapply` loops in R and make use of `functions` that are applied over the element of a `vector` or `list`.
+
+The syntax of the `lapply` loop can be a bit confusing at first as it is the other way around as the `for` loop.
+The biggest difference is, that `lapply` returns a list of values for every iteration step. So the output of the loop can be assigned directly to a variable.
+
+```{r}
+#| echo: true
+#| eval: false
+
+result <- lapply(i, FUN)
+
+# compared to:
+result <- c()
+for(i in x){
+  result[i] <- FUN
+}
+```
+
+
+
+There are multiple forms of apply loops. `lapply` and `sapply` only differ in their output format. `apply` is used for `data.frames`.
+
+
+```{r}
+#| eval: false
+#| echo: true
+lapply() # list apply
+
+sapply() # apply with vector output
+
+apply() # loop over rows or columns of a data.frame
+```
+
+
+
+```{r}
+#| echo: true
+lapply(seq(10), function(x){
+  x^2
+})
+```
+
+
+```{r}
+#| echo: true
+sapply(seq(10), function(x){
+  x^2
+})
+```
+
+
+
+
+
+
+
+
+
+
+
+

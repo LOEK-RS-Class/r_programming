@@ -1,0 +1,46 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "R control structures"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - text: "Functions"
+        menu: 
+          - text: "Introduction and Syntax"
+            href: fun_syntax.qmd
+          - text: "Usecase"
+            href: fun_usecase.qmd
+      - text: "If-Else"
+        menu: 
+          - text: "Introduction & Syntax"
+            href: cond_syntax.qmd
+          - text: "Usecase" 
+            #href: cond_usecase.qmd
+      - text: "Loops"
+        menu: 
+          - text: "for-loop Introduction & Syntax"
+            href: loop_for_syntax.qmd
+          - text: "for-loop Usecase"
+            href: loop_for_usecase.qmd
+          - text: "lapply-loop Introduction & Syntax"
+            href: loop_lapply_syntax.qmd
+          - text: "lapply Usecase"
+          - text: "Loop Comparison"
+    right:
+      - text: "More courses"
+        href: https://teaching.mlspatial.org
+      - icon: github
+        href: https://github.com/mlspatial
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+

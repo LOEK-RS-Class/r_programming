@@ -1,0 +1,85 @@
+# if-else
+
+Sometimes you want code that executes only in certain conditions. This is done via `if-else` structures like the example below. The `condition` in the if-statement expects `TRUE` or `FALSE`. Use logical operators to build an expression that turns out either `TRUE` or `FALSE`.
+
+```{r}
+#| echo: false
+
+knitr::include_graphics("assets/if1.png")
+```
+
+```{r}
+#| eval: false
+#| echo: true
+
+
+x = 4 # statement 1
+
+if(x > 2){ # condition
+    print("x is larger than 2") # statement 2
+}
+
+print("This message does not care about if.") # statement 3
+
+```
+
+
+
+
+```{r}
+#| echo: false
+
+knitr::include_graphics("assets/if2.png")
+
+```
+
+
+
+```{r}
+#| eval: false
+#| echo: true
+
+
+x = 4 # statement 1
+
+if(x > 2){ # condition
+    print("x is larger than 2") # statement 2
+} else{ # the false case
+    
+    print("x is not larger than 2") # statement 4
+    
+}
+
+print("This message does not care about if.") # statement 3
+
+```
+
+
+
+:::{.callout-important}
+## Task
+`sample(10, 1)` outputs a random number between 1 and 10. Write a if-else statement:
+
+* If the number is larger than 5, print the message "A large number".
+* If the number is smaller than 5, print the message "A small number".
+* If the number is exactly 5, print "It's 5"
+::: 
+
+
+<details>
+
+```{r}
+#| echo: false
+#| code-fold: true
+#| code-summary: "Hint:"
+
+knitr::include_graphics("assets/if3.png")
+
+```
+</details>
+
+
+
+
+
+

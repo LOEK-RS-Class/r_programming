@@ -1,0 +1,35 @@
+# Introduction to functions
+
+
+## When to use functions
+
+* for common tasks and computations
+* helps to structure code
+* to reduces code redundancies
+* for integration into packages with documentation
+
+
+
+## function syntax
+
+
+
+```{r}
+#| echo: true
+
+myFunction <- function(arg1, arg2){
+  X <- arg1 + arg2
+  result <- sqrt(X)
+  return(result)
+}
+
+# executing the function
+a <- myFunction(arg1 = 8, arg2 = 10)
+a
+```
+
+
+
+
+
+

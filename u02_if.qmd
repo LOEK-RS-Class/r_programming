@@ -1,0 +1,27 @@
+# if-else
+
+Sometimes you want code that executes only in certain conditions. This is done via `if-else` structures like the example below. The `condition` in the if-statement expects `TRUE` or `FALSE`. Use logical operators to build an expression that turns out either `TRUE` or `FALSE`.
+
+```{r}
+#| eval: false
+#| echo: true
+
+if(condition){
+  # Command 1
+  
+} else{
+  # Command 2
+  
+}
+
+```
+
+
+:::{.callout-important}
+## Task
+`sample(10, 1)` outputs a random number between 1 and 10. Write a if-else statement:
+
+* If the number is larger than 5, print the message "A large number".
+* If the number is smaller than 5, print the message "A small number".
+* If the number is exactly 5, print "It's 5"
+::: 
