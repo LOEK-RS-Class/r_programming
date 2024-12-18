@@ -1,39 +1,25 @@
-# Function Usecases
+# Function Usecase
 
 
-
-### Utility functions
-
-:::{.callout-important}
-## Task
-* Write a function `rmse` that calculates the Root Mean Squared Error.
-* Test the function with the dataset below.
-:::
-
-```{r}
-#| echo: false
-knitr::include_graphics("https://community.qlik.com/legacyfs/online/128958_2016-06-23%2013_45_36-Root%20Mean%20Squared%20Error%20_%20Kaggle.png")
-```
+# Generalise your code
 
 
-```{r}
-#| eval: false
-#| echo: true
-x = c(2,5,3,4)
-y = c(2,6,5,5)
-```
+The following dataset contains the average summer temperatures per year in Germany. You can download it [here](https://opendata.dwd.de/climate_environment/CDC/regional_averages_DE/seasonal/air_temperature_mean/regional_averages_tm_summer.txt).
 
-
-
-
-### Semi-Automatic analysis workflow
-
+The code block below calculates the long term average summer temperature between 1960 and 1989 for Bayern. In the following task we want to generalise this code in a way that we can choose for which years and which state we calculate the average temperature.
 
 
 ```{r}
 dwd = read.csv("https://opendata.dwd.de/climate_environment/CDC/regional_averages_DE/seasonal/air_temperature_mean/regional_averages_tm_summer.txt", sep = ";", skip = 1)
 knitr::kable(head(dwd))
 ```
+
+
+```{r}
+# mean temperature in Bayern between 1960 and 1989
+mean(dwd[dwd$Jahr >= 1960 & dwd$Jahr <= 1989, "Bayern"])
+```
+
 
 
 

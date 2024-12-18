@@ -12,6 +12,7 @@
 
 ## function syntax
 
+Functions are created the same way as you would create a new variable. You assign (`<- / =`)  a function to a variable name which in turn will be the name of the function. In the parenthesis you define the names of the arguments (in the example below `arg1` and `arg2`) of function. These arguments are basically placeholders i.e. variables you can use inside the function. Finally the function needs to `return` something, meaning the result of your function or the output.
 
 
 ```{r}
@@ -30,6 +31,14 @@ a
 
 
 
+:::{.callout-important}
+## Task
+* Write a simple function called `span` which subtracts the lowest value in a vector from the largest value in the vector.
+* Test the function with the vector below.
+:::
 
+```{r}
+vec <- c(8,6,7,16,3,8,71)
+```
 
 

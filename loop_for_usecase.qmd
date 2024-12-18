@@ -1,6 +1,34 @@
+---
+title: For Loop Usecase
+---
+
 # For Loop Usecase
 
+The following dataset contains the average summer temperatures per year in Germany. You can download it [here](https://opendata.dwd.de/climate_environment/CDC/regional_averages_DE/seasonal/air_temperature_mean/regional_averages_tm_summer.txt).
 
 
+
+
+```{r}
+dwd = read.csv("https://opendata.dwd.de/climate_environment/CDC/regional_averages_DE/seasonal/air_temperature_mean/regional_averages_tm_summer.txt", sep = ";", skip = 1)
+knitr::kable(head(dwd))
+```
+
+The code block below calculates the long term average summer temperature between 1960 and 1989 for Bayern.
+
+
+
+
+
+```{r}
+# mean temperature in Bayern between 1960 and 1989
+mean(dwd[dwd$Jahr >= 1960 & dwd$Jahr <= 1989, "Bayern"])
+```
+
+
+:::{.callout-important}
+## Task: Which decade had the warmest average temperature in Bayern?
+
+:::
 
 

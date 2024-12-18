@@ -1,0 +1,38 @@
+### Code generalization
+
+
+The root mean squared error is a common metricto determine the quality of a model.
+It is defined as the 
+
+```{r}
+#| echo: false
+knitr::include_graphics("https://community.qlik.com/legacyfs/online/128958_2016-06-23%2013_45_36-Root%20Mean%20Squared%20Error%20_%20Kaggle.png")
+```
+
+
+The following code block calculates the 
+
+
+
+
+
+
+
+
+:::{.callout-important}
+## Task
+* Write a function `rmse` that calculates the Root Mean Squared Error.
+* Test the function with the dataset below.
+:::
+
+
+
+```{r}
+#| eval: false
+#| echo: true
+x = c(2,5,3,4)
+y = c(2,6,5,5)
+```
+
+
+
